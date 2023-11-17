@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core', # new
+    'rest_framework', # new
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,13 @@ TEMPLATES = [
         },
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
+
 
 WSGI_APPLICATION = 'Sambook.wsgi.application'
 
